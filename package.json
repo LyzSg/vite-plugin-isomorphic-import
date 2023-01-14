@@ -1,0 +1,33 @@
+{
+  "name": "vite-plugin-isomorphic-import",
+  "version": "0.0.1",
+  "description": "A vite plugin that allows you to configure whether to import modules in the server-side or client-side.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LyzSg/vite-plugin-isomorphic-import.git"
+  },
+  "keywords": [
+    "vite",
+    "vite-plugin",
+    "isomorphic",
+    "import",
+    "ssr"
+  ],
+  "author": "lyzs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LyzSg/vite-plugin-isomorphic-import/issues"
+  },
+  "homepage": "https://github.com/LyzSg/vite-plugin-isomorphic-import#readme",
+  "dependencies": {
+    "es-module-lexer": "^1.1.0",
+    "magic-string": "^0.27.0"
+  },
+  "devDependencies": {
+    "vite": "^4.0.4"
+  }
+}
