@@ -18,14 +18,14 @@ yarn add -D vite-plugin-isomorphic-import
 import { isomorphicImport } from 'vite-plugin-isomorphic-import';
 
 export default {
-plugins: [
-		isomorphicImport({
-			// modules that you want to be imported only on client-side
-			client: ['some-client-side-module'],
-			// modules that you want to be imported only on server-side
-			server: [],
-		})
-	]
+  plugins: [
+    isomorphicImport({
+      // modules that you want to be imported only on client-side
+      client: ['some-client-side-module'],
+      // modules that you want to be imported only on server-side
+      server: [],
+    })
+  ]
 }
 ```
 This will be very useful for handling browser-only modules that do not support for node.
