@@ -12,18 +12,18 @@ export function isomorphicImport({client, server}: Options): PluginOption {
     name: 'vite-plugin-isomorphic-import',
     enforce: 'post',
     async transform(code, id, opts) {
-      const ssr = opts.ssr;
+      const ssr = opts?.ssr;
 
       await init;
 
-      let _s;
+      let _s: MagicString | undefined;
       const s = () => _s || (_s = new MagicString(code));
       const [imports] = parse(code);
 
       for (const i of imports) {
         if (!i.n || i.d !== -1) continue;
         
-        if ((ssr && client[i.n]) || (!ssr && server[i.n])) {
+        if ((ssr && client?.includes(i.n)) || (!ssr && server?.includes(i.n))) {
           s().overwrite(i.ss, i.se, '')
         }
       }
