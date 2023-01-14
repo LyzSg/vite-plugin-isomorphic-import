@@ -18,7 +18,7 @@ yarn add -D vite-plugin-isomorphic-import
 import { isomorphicImport } from 'vite-plugin-isomorphic-import';
 
 export default {
-	plugins: [
+plugins: [
 		isomorphicImport({
 			// modules that you want to be imported only on client-side
 			client: ['some-client-side-module'],
